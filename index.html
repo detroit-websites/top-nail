@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top Nail — Southfield</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --oxblood:#5C0A1D; --oxdeep:#3A0612; --porcelain:#F7ECE9; --rose:#C48B7C;
+  --ink:#1C1315; --champagne:#E9D6B4; --mute:#7A5C60;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--porcelain);color:var(--ink);font-family:Manrope,system-ui,sans-serif;font-weight:400;line-height:1.65;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+
+.hero{background:var(--oxblood);color:var(--porcelain);position:relative;overflow:hidden}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0}
+.nav .name{font-family:Italiana,serif;font-size:1.6rem;letter-spacing:.06em;text-decoration:none}
+.nav a.tel{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--champagne)}
+.hero h1{font-family:Italiana,serif;font-weight:400;font-size:clamp(4rem,14vw,12.5rem);line-height:.86;letter-spacing:.02em;text-align:center;margin-top:40px}
+.hero .sub{text-align:center;max-width:44ch;margin:26px auto 0;color:#E8CFCB;font-size:1.1rem}
+
+.shelf{display:flex;justify-content:center;align-items:flex-end;gap:clamp(10px,2.4vw,28px);margin-top:64px;padding-bottom:0}
+.bottle{width:clamp(38px,6vw,72px);display:flex;flex-direction:column;align-items:center}
+.bottle .cap{width:42%;height:clamp(40px,6vw,74px);background:var(--ink);border-radius:3px 3px 0 0}
+.bottle .neck{width:58%;height:10px;background:rgba(255,255,255,.18)}
+.bottle .body{width:100%;height:clamp(64px,10vw,120px);border-radius:10px 10px 0 0;position:relative}
+.bottle .body::after{content:"";position:absolute;left:16%;top:14%;width:12%;height:56%;border-radius:8px;background:rgba(255,255,255,.28)}
+.b1 .body{background:#E9B9AE}.b2 .body{background:#B5122E}.b3 .body{background:#E9D6B4}.b4 .body{background:#2B0A10}
+.b5 .body{background:#D97E8C}.b6 .body{background:#8E1430}.b7 .body{background:#F4E4DF}
+.b4 .body::after{background:rgba(255,255,255,.14)}
+.counter{height:22px;background:var(--oxdeep)}
+
+.intro{padding:110px 0 90px;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.intro h2{font-family:Italiana,serif;font-weight:400;font-size:clamp(2.3rem,4.4vw,3.6rem);line-height:1.05;color:var(--oxblood)}
+.intro p{font-size:1.1rem;max-width:46ch;color:var(--mute)}
+.intro p + p{margin-top:16px}
+.menu{list-style:none;margin-top:8px}
+.menu li{padding:16px 0;border-bottom:1px solid #E3CFCA;font-size:1.12rem;display:flex;justify-content:space-between;gap:16px}
+.menu li span{color:var(--mute);font-size:.92rem}
+
+.askfor{background:var(--ink);color:var(--porcelain);padding:100px 0}
+.askfor h2{font-family:Italiana,serif;font-weight:400;font-size:clamp(2.3rem,4.4vw,3.6rem);line-height:1.05}
+.askfor .lead{color:#BFA9AB;margin-top:12px;max-width:52ch}
+.names{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;border-top:1px solid #3A2A2D}
+.names div{padding:30px 22px 10px 0;border-right:1px solid #3A2A2D}
+.names div:last-child{border-right:0}
+.names div + div{padding-left:22px}
+.names b{display:block;font-family:Italiana,serif;font-weight:400;font-size:2.4rem;color:var(--champagne)}
+.names q{display:block;margin-top:10px;color:#D9C6C8;font-size:.98rem}
+.names small{display:block;margin-top:10px;color:#9C8487}
+
+.praise{padding:110px 0}
+.praise .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:28px}
+.q{grid-column:span 4;background:#fff;padding:34px 30px;border-radius:120px 120px 6px 6px;text-align:center;border:1px solid #EAD5D0}
+.q.wide{grid-column:span 6;border-radius:6px;text-align:left;background:var(--oxblood);color:var(--porcelain);border:0}
+.q p{font-size:1.06rem}
+.q.wide p{font-family:Italiana,serif;font-size:clamp(1.6rem,2.6vw,2.1rem);line-height:1.2}
+.q cite{display:block;margin-top:16px;font-style:normal;font-size:.9rem;color:var(--mute)}
+.q.wide cite{color:var(--champagne)}
+.q:not(.wide){padding-top:70px}
+
+.visit{background:var(--champagne);padding:96px 0}
+.visit .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px}
+.visit h2{font-family:Italiana,serif;font-weight:400;font-size:clamp(2.3rem,4.4vw,3.6rem);line-height:1.05;color:var(--oxblood)}
+.visit address{font-style:normal;margin-top:18px;font-size:1.15rem}
+.visit .note{margin-top:10px;color:var(--mute)}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.btn{display:inline-block;padding:15px 30px;border-radius:40px;text-decoration:none;font-weight:600;background:var(--oxblood);color:var(--porcelain)}
+.btn:hover{background:var(--oxdeep)}
+.btn.line{background:transparent;border:1px solid var(--oxblood);color:var(--oxblood)}
+.hrs{width:100%;border-collapse:collapse;font-size:1.05rem;align-self:start}
+.hrs td{padding:14px 0;border-bottom:1px solid rgba(92,10,29,.2)}
+.hrs td:last-child{text-align:right;font-weight:600}
+footer{background:var(--oxdeep);color:#C9A9AD;text-align:center;font-size:.82rem;padding:30px 0}
+
+@media (max-width:900px){
+  .intro,.visit .grid{grid-template-columns:1fr;gap:36px}
+  .names{grid-template-columns:1fr 1fr}
+  .names div:nth-child(2){border-right:0}
+  .names div:nth-child(3){padding-left:0}
+  .q,.q.wide{grid-column:span 12}
+}
+@media (max-width:520px){
+  .wrap{padding:0 20px}
+  .shelf .b6,.shelf .b7{display:none}
+  .names{grid-template-columns:1fr}
+  .names div,.names div + div{border-right:0;padding-left:0;border-bottom:1px solid #3A2A2D;padding-bottom:24px}
+  .intro,.praise,.askfor,.visit{padding-top:72px;padding-bottom:72px}
+}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="wrap">
+    <nav class="nav"><a class="name" href="#">Top Nail</a><a class="tel" href="tel:+12483953384">(248) 395-3384</a></nav>
+    <h1>Top Nail</h1>
+    <p class="sub">Manicures, pedicures and nail art on West 12 Mile in Southfield. Walk in, or call ahead for your favorite chair.</p>
+    <div class="shelf" aria-hidden="true">
+      <div class="bottle b1"><div class="cap"></div><div class="neck"></div><div class="body"></div></div>
+      <div class="bottle b2"><div class="cap"></div><div class="neck"></div><div class="body"></div></div>
+      <div class="bottle b3"><div class="cap"></div><div class="neck"></div><div class="body"></div></div>
+      <div class="bottle b4"><div class="cap"></div><div class="neck"></div><div class="body"></div></div>
+      <div class="bottle b5"><div class="cap"></div><div class="neck"></div><div class="body"></div></div>
+      <div class="bottle b6"><div class="cap"></div><div class="neck"></div><div class="body"></div></div>
+      <div class="bottle b7"><div class="cap"></div><div class="neck"></div><div class="body"></div></div>
+    </div>
+  </div>
+  <div class="counter"></div>
+</section>
+
+<section class="wrap intro">
+  <div>
+    <h2>A neighborhood salon with regulars who keep coming back.</h2>
+  </div>
+  <div>
+    <p>Some clients have been sitting in these chairs for more than fifteen years. They come for clean, careful work and a team that greets them by name.</p>
+    <ul class="menu">
+      <li>Manicures <span>Classic &amp; gel</span></li>
+      <li>Pedicures <span>With foot massage</span></li>
+      <li>Fills &amp; acrylics</li>
+      <li>Nail art <span>Holiday &amp; custom sets</span></li>
+      <li>Eyebrows</li>
+    </ul>
+  </div>
+</section>
+
+<section class="askfor">
+  <div class="wrap">
+    <h2>Ask for them by name</h2>
+    <p class="lead">Our clients tend to have a favorite. These are the names that come up again and again in their reviews.</p>
+    <div class="names">
+      <div><b>Lisa</b><q>Love her work, love the time that she puts in trying to satisfy her clients.</q><small>Owner</small></div>
+      <div><b>Emily</b><q>Emily is the best and competitive prices!</q><small>Rabih</small></div>
+      <div><b>Vy</b><q>She's very gentle on my hands and feet and can replicate what I ask for.</q><small>Ali</small></div>
+      <div><b>Steven</b><q>Steven did my pedicure and was awesome.</q><small>Google review, 2026</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="praise">
+  <div class="wrap grid">
+    <figure class="q wide">
+      <p>“I’ve been a customer at Top Nail for more than 15 years and I’m always pleased with Lisa, James, Peter, and the rest of the staff!”</p>
+      <cite>Deborah</cite>
+    </figure>
+    <figure class="q wide" style="background:var(--ink)">
+      <p>“Always greet me by first name and very polite. I ask for Christmas nails and that I received.”</p>
+      <cite>Sonia</cite>
+    </figure>
+    <figure class="q"><p>“Accurate, friendly service. moderately priced”</p><cite>Belinda</cite></figure>
+    <figure class="q"><p>“Love the owner, she makes you want to return!”</p><cite>Google review, 2026</cite></figure>
+    <figure class="q"><p>“Vee is the best! Great service and friendly staff.”</p><cite>Sherri</cite></figure>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap grid">
+    <div>
+      <h2>Come see us</h2>
+      <address>19937 W 12 Mile Rd<br>Southfield, MI 48076</address>
+      <p class="note">Walk-ins welcome. Free parking in the lot.</p>
+      <div class="btns">
+        <a class="btn" href="tel:+12483953384">Call (248) 395-3384</a>
+        <a class="btn line" href="https://www.google.com/maps/search/?api=1&query=Top%20Nail%2019937%20W%2012%20Mile%20Rd%20Southfield%20MI" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
+    <table class="hrs" aria-label="Opening hours">
+      <tr><td>Monday – Saturday</td><td>10 am – 7 pm</td></tr>
+      <tr><td>Sunday</td><td>Closed</td></tr>
+    </table>
+  </div>
+</section>
+<footer><div class="wrap">Sample design prepared for Top Nail — not affiliated with or endorsed by the business.</div></footer>
+</body>
+</html>
